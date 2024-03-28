@@ -53,8 +53,23 @@ class _LoginState extends State<Login> {
     prefixicon:Icon(Icons.password,size:35),
     hintText:'Password '),
    SizedBox(
-     height: 20,
+     height: 10,
    ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+
+        children: [
+          TextButton(
+              onPressed: (){},
+              child:Text(
+                'Forget Password?',style: TextStyle(
+                fontSize: 22,
+                color: Colors.black54,
+
+              ),
+              ) ),
+        ],
+      ),
     TextButton(
     onPressed: (){
     textColorcheck2=!textColorcheck2;
@@ -71,9 +86,11 @@ class _LoginState extends State<Login> {
 
     ),
     ) ),
+
     SizedBox(
       height: 10,
     ),
+
     Button(
     onPressed: (){},
     Text: 'LOGIN', color: Colors.white, size: 40.0,
