@@ -50,7 +50,7 @@ class _SignUpState extends State<SignUp> {
               Custom_Box(
                 top:40.0,
                 prefixIconColor: Colors.black87,
-                  controller:namecontroller,
+                  controller:Usernamecontroller,
                   prefixicon:Icon(Icons.person,size:35),
                   hintText:'Name'),
               Custom_Box(
