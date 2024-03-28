@@ -1,6 +1,7 @@
 import 'dart:ffi';
 
 import 'package:connectify/Common_widgets/Button.dart';
+import 'package:connectify/Screens/Login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -79,6 +80,11 @@ class _SignUpState extends State<SignUp> {
               onPressed: (){
                 textColorcheck=!textColorcheck;
                 changecolor();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context)=>Login()
+                  ),);
+
               }, child:Text(
             'Have an account!Login Here!',style: TextStyle(
                 fontSize: 22,

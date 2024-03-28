@@ -1,3 +1,4 @@
+import 'package:connectify/Screens/Register.dart';
 import 'package:flutter/material.dart';
 
 import '../Common_widgets/Button.dart';
@@ -58,6 +59,10 @@ class _LoginState extends State<Login> {
     onPressed: (){
     textColorcheck2=!textColorcheck2;
     changecolor();
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context)=>SignUp()
+    ),);
     }, child:Text(
     'Dont have an account!Register Here!',style: TextStyle(
     fontStyle: FontStyle.italic,
