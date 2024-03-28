@@ -45,13 +45,13 @@ class _LoginState extends State<Login> {
           prefixIconColor: Colors.black87,
            controller:Usernamecontroller,
              prefixicon:Icon(Icons.person,size:35),
-              hintText:'Enter Username'),
+              hintText:'Username'),
 
        Custom_Box(
     prefixIconColor: Colors.black87,
     controller:passwordcontroller,
     prefixicon:Icon(Icons.password,size:35),
-    hintText:'Enter Password '),
+    hintText:'Password '),
    SizedBox(
      height: 20,
    ),
@@ -64,10 +64,10 @@ class _LoginState extends State<Login> {
       MaterialPageRoute(builder: (context)=>SignUp()
     ),);
     }, child:Text(
-    'Dont have an account!Register Here!',style: TextStyle(
+    'No account? Register Here!',style: TextStyle(
     fontStyle: FontStyle.italic,
     fontSize: 22,
-    color: textColor2,
+    color: Colors.deepPurple,
 
     ),
     ) ),
