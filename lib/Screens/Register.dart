@@ -52,27 +52,27 @@ class _SignUpState extends State<SignUp> {
                 prefixIconColor: Colors.black87,
                   controller:Usernamecontroller,
                   prefixicon:Icon(Icons.person,size:35),
-                  hintText:'Enter Name'),
+                  hintText:'Name'),
               Custom_Box(
                   prefixIconColor: Colors.black87,
-                  controller:namecontroller,
+                  controller:Usernamecontroller,
                   prefixicon:Icon(Icons.account_box_outlined,size:35),
-                  hintText:'Enter Username'),
+                  hintText:'Username'),
               Custom_Box(
                   prefixIconColor: Colors.black87,
                   controller:emailcontroller,
                   prefixicon:Icon(Icons.email_sharp,size:35),
-                  hintText:'Enter Email'),
+                  hintText:'Email'),
               Custom_Box(
                   prefixIconColor: Colors.black87,
                   controller:passwordcontroller,
                   prefixicon:Icon(Icons.password,size:35),
-                  hintText:'Enter Password'),
+                  hintText:'Password'),
               Custom_Box(
                   prefixIconColor: Colors.black87,
                   controller:confirmpasswordcontroller,
                   prefixicon:Icon(Icons.password,size:35),
-                  hintText:'Enter ConfirmP Password'),
+                  hintText:'Confirm Password'),
               SizedBox(
                 height:9,
               ),
@@ -86,15 +86,15 @@ class _SignUpState extends State<SignUp> {
                   ),);
 
               }, child:Text(
-            'Have an account!Login Here!',style: TextStyle(
+            'Have account!? Login Here!',style: TextStyle(
                 fontSize: 22,
-               color: textColor,
+               color: Colors.deepPurple,
 
           ),
           ) ),
           Button(
             onPressed: (){},
-              Text: 'SIGN UP', color: Colors.white, size: 40.0,
+              Text: 'SIGN UP', color: Colors.white, size: 37.0,
           ),
             ],
           ),
