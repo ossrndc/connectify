@@ -1,3 +1,5 @@
+import 'package:connectify/Screens/Login.dart';
+import 'package:connectify/Screens/Register.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
+      debugShowCheckedModeBanner: false,
+             home: SignUp(),
     );
   }
 }
