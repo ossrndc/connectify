@@ -47,7 +47,11 @@ class _SignUpState extends State<SignUp> {
               Custom_Box(
                 top:40.0,
                 prefixIconColor: Colors.black87,
+<<<<<<< HEAD:lib/Screens/sign_up.dart
                   controller:nameController,
+=======
+                  controller:Usernamecontroller,
+>>>>>>> dc87d2325ade5daed6122b7d280e42fa995433af:lib/Screens/Register.dart
                   prefixicon:Icon(Icons.person,size:35),
                   hintText:'Name'),
               Custom_Box(
