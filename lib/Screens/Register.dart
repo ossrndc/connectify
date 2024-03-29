@@ -1,8 +1,5 @@
-import 'dart:ffi';
-
 import 'package:connectify/Common_widgets/Button.dart';
 import 'package:connectify/Screens/Login.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -20,11 +17,11 @@ class SignUp extends StatefulWidget {
 class _SignUpState extends State<SignUp> {
  bool textColorcheck = true;
  Color textColor=Colors.blue;
-  TextEditingController namecontroller=TextEditingController();
-  TextEditingController Usernamecontroller=TextEditingController();
-  TextEditingController emailcontroller=TextEditingController();
-  TextEditingController passwordcontroller=TextEditingController();
-  TextEditingController confirmpasswordcontroller=TextEditingController();
+  final TextEditingController nameController=TextEditingController();
+  final TextEditingController usernameController=TextEditingController();
+  final TextEditingController emailController=TextEditingController();
+  final TextEditingController passwordController=TextEditingController();
+  final TextEditingController confirmPasswordController=TextEditingController();
 
   void changecolor(){
     setState(() {
@@ -50,27 +47,31 @@ class _SignUpState extends State<SignUp> {
               Custom_Box(
                 top:40.0,
                 prefixIconColor: Colors.black87,
+<<<<<<< HEAD:lib/Screens/sign_up.dart
+                  controller:nameController,
+=======
                   controller:Usernamecontroller,
+>>>>>>> dc87d2325ade5daed6122b7d280e42fa995433af:lib/Screens/Register.dart
                   prefixicon:Icon(Icons.person,size:35),
                   hintText:'Name'),
               Custom_Box(
                   prefixIconColor: Colors.black87,
-                  controller:Usernamecontroller,
+                  controller:usernameController,
                   prefixicon:Icon(Icons.account_box_outlined,size:35),
                   hintText:'Username'),
               Custom_Box(
                   prefixIconColor: Colors.black87,
-                  controller:emailcontroller,
+                  controller:emailController,
                   prefixicon:Icon(Icons.email_sharp,size:35),
                   hintText:'Email'),
               Custom_Box(
                   prefixIconColor: Colors.black87,
-                  controller:passwordcontroller,
+                  controller:passwordController,
                   prefixicon:Icon(Icons.password,size:35),
                   hintText:'Password'),
               Custom_Box(
                   prefixIconColor: Colors.black87,
-                  controller:confirmpasswordcontroller,
+                  controller:confirmPasswordController,
                   prefixicon:Icon(Icons.password,size:35),
                   hintText:'Confirm Password'),
               SizedBox(
