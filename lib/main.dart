@@ -1,4 +1,4 @@
-import 'package:connectify/Screens/Register.dart';
+import 'package:connectify/Screens/SignUp.dart';
 import 'package:flutter/material.dart';
 
 void main() {
