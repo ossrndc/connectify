@@ -1,29 +1,19 @@
-# Miscellaneous
+# Ignore compiled files
 *.class
 *.log
 *.pyc
 *.swp
-.DS_Store
-.atom/
-.buildlog/
-.history
-.svn/
-migrate_working_dir/
 
-# IntelliJ related
+# Ignore system-specific files
+.DS_Store
+
+# Ignore IntelliJ related files
 *.iml
 *.ipr
 *.iws
 .idea/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
-
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
+# Ignore Flutter/Dart/Pub related directories
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
@@ -31,13 +21,32 @@ migrate_working_dir/
 .pub/
 /build/
 
-# Symbolication related
+# Ignore symbolication and obfuscation related files
 app.*.symbols
-
-# Obfuscation related
 app.*.map.json
 
-# Android Studio will place build artifacts here
+# Ignore Android Studio related build artifacts
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Ignore Gradle build files
+**/build/
+
+# Ignore IDE-specific settings
+.vscode/
+
+# Ignore local configuration files
+local.properties
+
+# Ignore generated files and directories
+/generated/
+
+# Ignore user-specific configuration
+/.idea/workspace.xml
+/.idea/tasks.xml
+
+# Ignore temporary files and directories
+.history
+.svn/
+migrate_working_dir/
