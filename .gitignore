@@ -116,11 +116,20 @@ unlinked_spec.ds
 **/windows/flutter/generated_plugin_registrant.cc
 **/windows/flutter/generated_plugin_registrant.h
 **/windows/flutter/generated_plugins.cmake
+**/windows/runner/utils.h
+**/windows/runner/win32_window.h
+**/windows/runner/win32_window.cpp
+**/windows/runner/flutter_window.h
+**/windows/runner/flutter_window.cpp
+**/windows/runner/utils.cpp
+**/windows/runner/main.cpp
 
 # Linux
 **/linux/flutter/generated_plugin_registrant.cc
 **/linux/flutter/generated_plugin_registrant.h
 **/linux/flutter/generated_plugins.cmake
+**/linux/main.cc
+**/linux/my_application.cc
 
 # Coverage
 coverage/
