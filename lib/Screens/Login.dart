@@ -92,7 +92,9 @@ class _LoginState extends State<Login> {
     ),
 
     Button(
-    onPressed: (){},
+    onPressed: (){
+        Navigator.pushNamed(context,"/SignUp");
+    },
     Text: 'LOGIN', color: Colors.white, size: 40.0,
     ),
     ],

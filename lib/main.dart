@@ -1,3 +1,5 @@
+import 'package:connectify/Screens/Login.dart';
+import 'package:connectify/Screens/MainPage.dart';
 import 'package:connectify/Screens/SignUp.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +15,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-             home: SignUp(),
+
+
+         routes: {
+
+             "/" :(context) =>   Login(),
+             "/SignUp":(context)=>SignUp(),
+            "/HomePage":(context)=>Home_Page(),
+
+
+
+         },
     );
   }
 }
