@@ -32,6 +32,7 @@ class _Custom_BoxState extends State<Custom_Box> {
         width: MediaQuery.of(context).size.width/1,
         child: TextFormField(
           onTap: (){},
+          validator: (value){},
           controller: widget.controller,
           decoration:  InputDecoration(
               prefixIcon: widget.prefixicon,

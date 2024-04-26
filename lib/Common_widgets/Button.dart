@@ -5,7 +5,7 @@ class Button extends StatefulWidget {
   final String Text;
   final Color color;
   final double size;
-  final Function onPressed;
+  final VoidCallback onPressed;
    Button({super.key, required this.Text, required this.color, required this.size, required this.onPressed});
 
   @override
@@ -18,7 +18,7 @@ class _ButtonState extends State<Button> {
     return ElevatedButton(
 
     onPressed: (){
-      widget.onPressed;
+      widget.onPressed();
     },
 
         child: Text(widget.Text,style: TextStyle(

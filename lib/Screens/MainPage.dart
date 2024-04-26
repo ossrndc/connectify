@@ -1,0 +1,76 @@
+import 'package:connectify/Screens/Login.dart';
+import 'package:connectify/Screens/SignUp.dart';
+import 'package:connectify/Screens/chat_screen.dart';
+import 'package:connectify/Screens/user_profile.dart';
+import 'package:flutter/material.dart';
+
+
+class Home_Page extends StatefulWidget {
+  const Home_Page({super.key});
+
+  @override
+  State<Home_Page> createState() => _Home_PageState();
+}
+
+class _Home_PageState extends State<Home_Page> {
+  int Selected_index=0;
+   List<Widget>pages=<Widget>[
+    //enter widgets for bottom navigation bar
+    chat_screen(),
+     Icon(
+       Icons.camera,
+       size: 150,
+     ),
+     Icon(
+       Icons.chat,
+       size: 150,
+     ),
+  ];
+
+  void onItemTapped(int index){
+    setState(() {
+      Selected_index = index;
+    });  }
+
+
+  @override
+
+
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(child: pages.elementAt(Selected_index)),
+      appBar: AppBar(
+        elevation: 0,
+        automaticallyImplyLeading: false,
+       backgroundColor: Colors.blueAccent,title: Center(
+         child: Text('CONNECTIFY',style: TextStyle(
+          color: Colors.white,
+          fontSize: 29
+               ),),
+       ),
+      ),
+  
+      bottomNavigationBar: BottomNavigationBar(
+        elevation: 0,
+        backgroundColor: Colors.blue,
+        onTap: onItemTapped,
+        currentIndex:Selected_index ,
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.chat_bubble_outlined),
+            label: 'HOME',
+
+              ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.contacts),
+            label: 'CONTACTS',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'SETTINGS',
+          )
+        ],
+      ),
+    );
+  }
+}
