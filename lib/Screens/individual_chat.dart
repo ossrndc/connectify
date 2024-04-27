@@ -61,15 +61,15 @@ class _Individual_chatState extends State<Individual_chat> {
                 return[
                   PopupMenuItem(
                     value: 'View Contacts',
-                      child: Text('View Conracts',)
+                      child: Text('View Contacts',)
                   ),
                   PopupMenuItem(
                       value: 'View Contacts',
-                      child: Text('View Conracts',)
+                      child: Text('Hide Contacts',)
                   ),
                   PopupMenuItem(
                       value: 'View Contacts',
-                      child: Text('View Conracts',)
+                      child: Text('Settings',)
                   ),
 
                 ];

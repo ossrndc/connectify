@@ -15,10 +15,10 @@ class _chat_screenState extends State<chat_screen> {
   List<chatmodel>chats=[
     chatmodel(
     currentMessage: 'Life is good',
-    name: 'Picakchu',
+    name: 'Pikachu',
       icon: 'Icons.person',
       isGroup: false,
-      time: '12:29',
+      time: '6:25',
     ),
     chatmodel(
       currentMessage: 'I am Iron Man',
@@ -26,6 +26,20 @@ class _chat_screenState extends State<chat_screen> {
       icon: 'Icons.person',
       isGroup: false,
       time: '12:29',
+    ),
+    chatmodel(
+      currentMessage: 'See you there',
+      name: 'Ex',
+      icon: 'Icons.person',
+      isGroup: false,
+      time: '12:01',
+    ),
+    chatmodel(
+      currentMessage: 'Bunk krte hn guyss',
+      name: 'Classroom',
+      icon: 'Icons.person',
+      isGroup: true,
+      time: '1:20',
     )
   ];
   @override
@@ -35,7 +49,8 @@ class _chat_screenState extends State<chat_screen> {
       Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          title: Center(child: Text('Chat Screen')),
+          title:  Text('Chat Screen'),
+          backgroundColor: Colors.blueGrey,
         ),
         body: ListView.builder(
           itemCount: chats.length,
