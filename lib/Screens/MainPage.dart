@@ -5,14 +5,14 @@ import 'package:connectify/Screens/user_profile.dart';
 import 'package:flutter/material.dart';
 
 
-class Home_Page extends StatefulWidget {
-  const Home_Page({super.key});
+class Main_Page extends StatefulWidget {
+  const Main_Page({super.key});
 
   @override
-  State<Home_Page> createState() => _Home_PageState();
+  State<Main_Page> createState() => _Main_PageState();
 }
 
-class _Home_PageState extends State<Home_Page> {
+class _Main_PageState extends State<Main_Page> {
   int Selected_index=0;
    List<Widget>pages=<Widget>[
     //enter widgets for bottom navigation bar
@@ -42,7 +42,7 @@ class _Home_PageState extends State<Home_Page> {
       appBar: AppBar(
         elevation: 0,
         automaticallyImplyLeading: false,
-       backgroundColor: Colors.blueAccent,title: Center(
+       backgroundColor: Colors.black,title: Center(
          child: Text('CONNECTIFY',style: TextStyle(
           color: Colors.white,
           fontSize: 29
@@ -51,22 +51,26 @@ class _Home_PageState extends State<Home_Page> {
       ),
   
       bottomNavigationBar: BottomNavigationBar(
-        elevation: 0,
-        backgroundColor: Colors.blue,
+        iconSize: 30,
+        backgroundColor: Colors.black,
+        unselectedItemColor: Colors.white,
         onTap: onItemTapped,
         currentIndex:Selected_index ,
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.chat_bubble_outlined),
+              icon: Icon(Icons.chat_bubble_outlined,color: Colors.white,),
             label: 'HOME',
+
+
+
 
               ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.contacts),
+            icon: Icon(Icons.contacts,color: Colors.white,),
             label: 'CONTACTS',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
+            icon: Icon(Icons.settings,color: Colors.white,),
             label: 'SETTINGS',
           )
         ],

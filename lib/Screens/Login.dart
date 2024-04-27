@@ -27,79 +27,84 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor:Colors.white,
+        backgroundColor:Colors.black12,
         body:SingleChildScrollView(
-        child: Padding(
-        padding: EdgeInsets.only(
-        top: MediaQuery.of(context).size.height/4,
-    ),
-    child: Column(
-    children: [
-    Text('LOGIN ',style: TextStyle(
-    color: Colors.blue,
-    fontSize: 50,
-    fontWeight: FontWeight.bold,
-    ),),
-        Custom_Box(
-         top:40.0,
-          prefixIconColor: Colors.black87,
-           controller:Usernamecontroller,
-             prefixicon:Icon(Icons.person,size:35),
-              hintText:'Username'),
-
-       Custom_Box(
-    prefixIconColor: Colors.black87,
-    controller:passwordcontroller,
-    prefixicon:Icon(Icons.password,size:35),
-    hintText:'Password '),
-   SizedBox(
-     height: 10,
-   ),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-
+        child: Column(
         children: [
-          TextButton(
-              onPressed: (){},
-              child:Text(
-                'Forget Password?',style: TextStyle(
-                fontSize: 22,
-                color: Colors.black54,
-
+          Padding(
+            padding: const EdgeInsets.only(top:0,bottom:0),
+            child: Container(
+              width:900,
+              height:300,
+              child: Image.asset('lib/Utility/Images/cube.jpg'
               ),
-              ) ),
+            ),
+          ),
+        Text('LOGIN ',style: TextStyle(
+        color: Colors.blue,
+        fontSize: 50,
+        fontWeight: FontWeight.bold,
+        ),),
+            Custom_Box(
+             top:40.0,
+              prefixIconColor: Colors.blueAccent.shade700,
+               controller:Usernamecontroller,
+                 prefixicon:Icon(Icons.person,size:35),
+                  hintText:'Username'),
+
+           Custom_Box(
+             top: 20,
+        prefixIconColor: Colors.blueAccent.shade700,
+        controller:passwordcontroller,
+        prefixicon:Icon(Icons.password,size:35),
+        hintText:'Password '),
+           SizedBox(
+         height: 40,
+           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+
+            children: [
+              TextButton(
+                  onPressed: (){},
+                  child:Text(
+                    'Forget Password?',style: TextStyle(
+                    fontSize: 22,
+                    color: Colors.white,
+
+                  ),
+                  ) ),
+            ],
+          ),
+        TextButton(
+        onPressed: (){
+        textColorcheck2=!textColorcheck2;
+        changecolor();
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context)=>SignUp()
+        ),);
+        }, child:Text(
+        'No account? Register Here!',style: TextStyle(
+        fontStyle: FontStyle.italic,
+        fontSize: 22,
+        color: Colors.deepPurple,
+
+        ),
+        ) ),
+
+        SizedBox(
+          height: 10,
+        ),
+
+        Button(
+        onPressed: (){
+            Navigator.pushNamed(context,"/SignUp");
+        },
+        Text: 'LOGIN', color: Colors.white, size: 40.0,
+        ),
         ],
-      ),
-    TextButton(
-    onPressed: (){
-    textColorcheck2=!textColorcheck2;
-    changecolor();
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context)=>SignUp()
-    ),);
-    }, child:Text(
-    'No account? Register Here!',style: TextStyle(
-    fontStyle: FontStyle.italic,
-    fontSize: 22,
-    color: Colors.deepPurple,
-
-    ),
-    ) ),
-
-    SizedBox(
-      height: 10,
-    ),
-
-    Button(
-    onPressed: (){
-        Navigator.pushNamed(context,"/SignUp");
-    },
-    Text: 'LOGIN', color: Colors.white, size: 40.0,
-    ),
-    ],
-    ),
-    ),
+        ),
     ),
     );
     }
