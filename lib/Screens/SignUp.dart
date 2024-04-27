@@ -33,75 +33,79 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:Colors.white,
+      backgroundColor:Colors.black54,
       body:SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.only(
-            top: MediaQuery.of(context).size.height/7,
-          ),
-          child: Form(
-            key:_signuformpkey,
-            child: Column(
-              children: [
-                Text('REGISTER ',style: TextStyle(
-                  color: Colors.blue,
-                  fontSize: 50,
-                  fontWeight: FontWeight.bold,
-                ),),
-                Custom_Box(
-                  top:40.0,
-                  prefixIconColor: Colors.black87,
-                    controller:nameController,
-                    prefixicon:Icon(Icons.person,size:35),
-                    hintText:'Name'),
-
-                Custom_Box(
-                    prefixIconColor: Colors.black87,
-                    controller:usernameController,
-                    prefixicon:Icon(Icons.account_box_outlined,size:35),
-                    hintText:'Username'),
-                Custom_Box(
-                    prefixIconColor: Colors.black87,
-                    controller:emailController,
-                    prefixicon:Icon(Icons.email_sharp,size:35),
-                    hintText:'Email'),
-                Custom_Box(
-                    prefixIconColor: Colors.black87,
-                    controller:passwordController,
-                    prefixicon:Icon(Icons.password,size:35),
-                    hintText:'Password'),
-                Custom_Box(
-                    prefixIconColor: Colors.black87,
-                    controller:confirmPasswordController,
-                    prefixicon:Icon(Icons.password,size:35),
-                    hintText:'Confirm Password'),
-                SizedBox(
-                  height:9,
+        child: Form(
+          key:_signuformpkey,
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top:0,bottom:0),
+                child: Container(
+                  width:900,
+                  height:200,
+                  child: Image.asset('lib/Utility/Images/cube.jpg'
+                  ),
                 ),
-            TextButton(
-                onPressed: (){
-                  textColorcheck=!textColorcheck;
-                  changecolor();
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context)=>Login()
-                    ),);
+              ),
+              Text('REGISTER ',style: TextStyle(
+                color: Colors.blue,
+                fontSize: 50,
+                fontWeight: FontWeight.bold,
+              ),),
+              Custom_Box(
+                top:40.0,
+                prefixIconColor: Colors.blueAccent.shade700,
+                  controller:nameController,
+                  prefixicon:Icon(Icons.person,size:35),
+                  hintText:'Name'),
 
-                }, child:Text(
-              'Have account!? Login Here!',style: TextStyle(
-                  fontSize: 22,
-                 color: Colors.deepPurple,
-
-            ),
-            ) ),
-            Button(
+              Custom_Box(
+                  prefixIconColor: Colors.blueAccent.shade700,
+                  controller:usernameController,
+                  prefixicon:Icon(Icons.account_box_outlined,size:35),
+                  hintText:'Username'),
+              Custom_Box(
+                  prefixIconColor: Colors.blueAccent.shade700,
+                  controller:emailController,
+                  prefixicon:Icon(Icons.email_sharp,size:35),
+                  hintText:'Email'),
+              Custom_Box(
+                  prefixIconColor: Colors.blueAccent.shade700,
+                  controller:passwordController,
+                  prefixicon:Icon(Icons.password,size:35),
+                  hintText:'Password'),
+              Custom_Box(
+                  prefixIconColor: Colors.blueAccent.shade700,
+                  controller:confirmPasswordController,
+                  prefixicon:Icon(Icons.password,size:35),
+                  hintText:'Confirm Password'),
+              SizedBox(
+                height:9,
+              ),
+          TextButton(
               onPressed: (){
-                    Navigator.pushNamed(context, "/HomePage");
-              },
-                Text: 'SIGN UP', color: Colors.white, size: 37.0,
-            ),
-              ],
-            ),
+                textColorcheck=!textColorcheck;
+                changecolor();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context)=>Login()
+                  ),);
+
+              }, child:Text(
+            'Have account!? Login Here!',style: TextStyle(
+                fontSize: 22,
+               color: Colors.deepPurple,
+
+          ),
+          ) ),
+          Button(
+            onPressed: (){
+                  Navigator.pushNamed(context, "/MainPage");
+            },
+              Text: 'SIGN UP', color: Colors.white, size: 37.0,
+          ),
+            ],
           ),
         ),
       ),
