@@ -40,6 +40,13 @@ class _chat_screenState extends State<chat_screen> {
       icon: 'Icons.person',
       isGroup: true,
       time: '1:20',
+    ),
+    chatmodel(
+      currentMessage: 'padhi karlo yarr',
+      name: 'your dost',
+      icon: 'Icons.person',
+      isGroup: false,
+      time: '8:20',
     )
   ];
   @override
@@ -47,6 +54,7 @@ class _chat_screenState extends State<chat_screen> {
   Widget build(BuildContext context) {
     return
       Scaffold(
+        backgroundColor: Color.fromARGB(255, 66, 229, 109),
         appBar: AppBar(
           automaticallyImplyLeading: false,
           title:  Text('Chat Screen'),
