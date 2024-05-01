@@ -40,6 +40,13 @@ class _chat_screenState extends State<chat_screen> {
       icon: 'Icons.person',
       isGroup: true,
       time: '1:20',
+    ),
+    chatmodel(
+      currentMessage: 'padhi karlo yarr',
+      name: 'your dost',
+      icon: 'Icons.person',
+      isGroup: false,
+      time: '8:20',
     )
   ];
   @override
