@@ -18,7 +18,7 @@ class _Main_PageState extends State<Main_Page> {
     //enter widgets for bottom navigation bar
     chat_screen(),
      Icon(
-       Icons.camera,
+       Icons.contacts,
        size: 150,
      ),
      Icon(
