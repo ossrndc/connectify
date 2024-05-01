@@ -1,8 +1,10 @@
-import 'package:connectify/Screens/forgot_password.dart';
-import 'package:flutter/material.dart';
 import 'package:connectify/Screens/SignUp.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+
 import '../Common_widgets/Button.dart';
 import '../Common_widgets/Custom_Box.dart';
+
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -14,7 +16,6 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   bool textColorCheck2 = true;
   Color textColor2 = Colors.blue;
-  TextEditingController usernameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
@@ -22,6 +23,25 @@ class _LoginState extends State<Login> {
     setState(() {
       textColor2 = textColorCheck2 ? Colors.lightBlueAccent : Colors.purple;
     });
+  }
+
+  Future<void> signIn(BuildContext context) async {
+    try {
+      UserCredential userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailController.text.trim(),
+        password: passwordController.text.trim(),
+      );
+      if (userCredential.user != null) {
+      
+        Navigator.pushNamed(context, "/MainPage");
+      } else {
+        
+        print('Error signing in: User not found');
+      }
+    } catch (e) {
+     
+      print('Error signing in: $e');
+    }
   }
 
   @override
@@ -50,9 +70,9 @@ class _LoginState extends State<Login> {
             Custom_Box(
               top: 40.0,
               prefixIconColor: Colors.blueAccent.shade700,
-              controller: usernameController,
+              controller: emailController,
               prefixicon: Icon(Icons.person, size: 35),
-              hintText: 'Username',
+              hintText: 'Email',
             ),
             Custom_Box(
               top: 20,
@@ -69,10 +89,7 @@ class _LoginState extends State<Login> {
               children: [
                 TextButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ForgotPassword()),
-                    );
+                  
                   },
                   child: Text(
                     'Forgot Password?',
@@ -106,9 +123,7 @@ class _LoginState extends State<Login> {
               height: 10,
             ),
             Button(
-              onPressed: () {
-                // Perform login logic here
-              },
+              onPressed: () => signIn(context), 
               Text: 'LOGIN',
               color: Colors.white,
               size: 40.0,
@@ -119,4 +134,3 @@ class _LoginState extends State<Login> {
     );
   }
 }
-
