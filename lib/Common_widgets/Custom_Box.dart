@@ -34,6 +34,7 @@ class _Custom_BoxState extends State<Custom_Box> {
           onTap: (){},
           validator: (value){},
           controller: widget.controller,
+          style: TextStyle(color: Colors.white),
           decoration:  InputDecoration(
               prefixIcon: widget.prefixicon,
               prefixIconColor: widget.prefixIconColor,
