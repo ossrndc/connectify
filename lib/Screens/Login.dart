@@ -50,14 +50,18 @@ class _LoginState extends State<Login> {
               prefixIconColor: Colors.blueAccent.shade700,
                controller:Usernamecontroller,
                  prefixicon:Icon(Icons.person,size:35),
-                  hintText:'Username'),
+                  hintText:'Username',
+                  style: TextStyle(color:Colors.red)
+            ),
 
            Custom_Box(
              top: 20,
         prefixIconColor: Colors.blueAccent.shade700,
         controller:passwordcontroller,
         prefixicon:Icon(Icons.password,size:35),
-        hintText:'Password '),
+        hintText:'Password ',
+        style: TextStyle(color:Colors.red)
+        ),
            SizedBox(
          height: 40,
            ),

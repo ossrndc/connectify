@@ -56,6 +56,7 @@ class _chat_screenState extends State<chat_screen> {
       Scaffold(
         backgroundColor: Colors.blueGrey,
         appBar: AppBar(
+        backgroundColor: Colors.blueGrey,
           automaticallyImplyLeading: false,
           title:  Text('Chat Screen'),
           backgroundColor: Colors.blueGrey,
