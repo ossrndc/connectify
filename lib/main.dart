@@ -1,7 +1,6 @@
 import 'package:connectify/Screens/Login.dart';
 import 'package:connectify/Screens/MainPage.dart';
 import 'package:connectify/Screens/SignUp.dart';
-import 'package:connectify/Screens/splash_screen.dart';
 import 'package:connectify/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
