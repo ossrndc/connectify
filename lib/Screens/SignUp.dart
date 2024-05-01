@@ -58,28 +58,38 @@ class _SignUpState extends State<SignUp> {
                 prefixIconColor: Colors.blueAccent.shade700,
                   controller:nameController,
                   prefixicon:Icon(Icons.person,size:35),
-                  hintText:'Name'),
+                  hintText:'Name',
+                  style: TextStyle(color:Colors.red)
+                  ),
 
               Custom_Box(
                   prefixIconColor: Colors.blueAccent.shade700,
                   controller:usernameController,
                   prefixicon:Icon(Icons.account_box_outlined,size:35),
-                  hintText:'Username'),
+                  hintText:'Username',
+                  style: TextStyle(color:Colors.red)
+                  ),
               Custom_Box(
                   prefixIconColor: Colors.blueAccent.shade700,
                   controller:emailController,
                   prefixicon:Icon(Icons.email_sharp,size:35),
-                  hintText:'Email'),
+                  hintText:'Email',
+                  style: TextStyle(color:Colors.red)
+                  ),
               Custom_Box(
                   prefixIconColor: Colors.blueAccent.shade700,
                   controller:passwordController,
                   prefixicon:Icon(Icons.password,size:35),
-                  hintText:'Password'),
+                  hintText:'Password',
+                  style: TextStyle(color:Colors.red)
+                  ),
               Custom_Box(
                   prefixIconColor: Colors.blueAccent.shade700,
                   controller:confirmPasswordController,
                   prefixicon:Icon(Icons.password,size:35),
-                  hintText:'Confirm Password'),
+                  hintText:'Confirm Password',
+                  style: TextStyle(color:Colors.red)
+                  ),
               SizedBox(
                 height:9,
               ),

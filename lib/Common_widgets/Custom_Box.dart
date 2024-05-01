@@ -16,8 +16,8 @@ class Custom_Box extends StatefulWidget {
   final double left;
   final double right;
   final double bottom;
-
-   Custom_Box({super.key, required this.controller,required this.prefixicon, this.prefixIconColor=Colors.blueAccent, required this.hintText,this.top=2.0, this.left=7, this.right=10,this.bottom=11});
+  final TextStyle style;
+   Custom_Box({super.key, required this.controller,required this.prefixicon, this.prefixIconColor=Colors.blueAccent, required this.hintText,this.top=2.0, this.left=7, this.right=10,this.bottom=11,this.style = const TextStyle()});
 
   @override
   State<Custom_Box> createState() => _Custom_BoxState();
