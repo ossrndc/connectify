@@ -1,6 +1,7 @@
 import 'package:connectify/Screens/Login.dart';
 import 'package:connectify/Screens/MainPage.dart';
 import 'package:connectify/Screens/SignUp.dart';
+import 'package:connectify/Screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,9 +16,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      initialRoute: '/splash',
 
 
          routes: {
+            '/splash': (context) => SplashScreen(),
 
              "/" :(context) =>   Login(),
              "/SignUp":(context)=>SignUp(),
