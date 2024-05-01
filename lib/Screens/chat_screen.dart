@@ -1,8 +1,7 @@
 import 'package:connectify/Common_widgets/chat_box.dart';
-import'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 import '../models/chat.dart';
-
 
 class chat_screen extends StatefulWidget {
   const chat_screen({super.key});
@@ -12,10 +11,10 @@ class chat_screen extends StatefulWidget {
 }
 
 class _chat_screenState extends State<chat_screen> {
-  List<chatmodel>chats=[
+  List<chatmodel> chats = [
     chatmodel(
-    currentMessage: 'Life is good',
-    name: 'Pikachu',
+      currentMessage: 'Life is good',
+      name: 'Pikachu',
       icon: 'Icons.person',
       isGroup: false,
       time: '6:25',
@@ -40,25 +39,28 @@ class _chat_screenState extends State<chat_screen> {
       icon: 'Icons.person',
       isGroup: true,
       time: '1:20',
-    )
+    ),
+    chatmodel(
+        name: 'commit_24',
+        currentMessage: 'this is my first contribution',
+        icon: 'Icons.person',
+        isGroup: true,
+        time: ' 7:32')
   ];
   @override
-
   Widget build(BuildContext context) {
-    return
-      Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          title:  Text('Chat Screen'),
-          backgroundColor: Colors.blueGrey,
-        ),
-        body: ListView.builder(
-          itemCount: chats.length,
-            itemBuilder:(BuildContext context, index)=>
-                chat_box(Chatmodel: chats[index]),
-        ),
-        );
-
+    return Scaffold(
+      backgroundColor: Color.fromARGB(180, 175, 151, 151),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: Text('Chat Screen'),
+        backgroundColor: Colors.blueGrey,
+      ),
+      body: ListView.builder(
+        itemCount: chats.length,
+        itemBuilder: (BuildContext context, index) =>
+            chat_box(Chatmodel: chats[index]),
+      ),
+    );
   }
 }
-
