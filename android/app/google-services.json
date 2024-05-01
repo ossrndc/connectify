@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "717631142117",
+    "project_id": "newapp-e317e",
+    "storage_bucket": "newapp-e317e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717631142117:android:60be3880e2a2f36314bc0c",
+        "android_client_info": {
+          "package_name": "com.example.connectify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRbPIzJ41taOwY2X5YUr0uO5whj0CJtik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717631142117:android:0d21dbca0ab8d14d14bc0c",
+        "android_client_info": {
+          "package_name": "com.example.new_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRbPIzJ41taOwY2X5YUr0uO5whj0CJtik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
