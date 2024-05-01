@@ -75,11 +75,23 @@ Not only you would learn to make your code public, you would also explore the in
 
 2. Create your Feature Branch `(git checkout -b feat/AmazingFeature)` or Bug Fix Feature `(git checkout -b fix/BugName)`.
 
-3. Commit your Changes `(git commit -m 'Add some AmazingFeature'` or `git commit -m 'Fixes #issueNumber)`.
+3. After cloning the project, run the following command, `git remote add upstream https://github.com/ossrndc/connectify.git`
 
-4. Push to the Branch `(git push origin feature/AmazingFeature)`.
+4. Commit your Changes `(git commit -m 'Add some AmazingFeature'` or `git commit -m 'Fixes #issueNumber)`.
 
-5. Open a Pull Request to main through your github account.
+5. Push to the Branch `(git push origin feature/AmazingFeature)`.
+
+6. Open a Pull Request to main through your github account.
+
+### Before any contribution,
+
+1. Sync the code : `git pull upstream main`
+2. Sync the code with your remote : `git push origin main`
+3. Switch to new branch : `git checkout -b feat/new_feature`
+4. `git add .` and `git commit -m "What you did in this commit"`
+5. `git push origin`
+   
+Now, create a PR :)
 
 
 
