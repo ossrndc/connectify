@@ -47,6 +47,7 @@ class _chat_screenState extends State<chat_screen> {
   Widget build(BuildContext context) {
     return
       Scaffold(
+        backgroundColor: Color.fromARGB(136, 141, 115, 115),
         appBar: AppBar(
           automaticallyImplyLeading: false,
           title:  Text('Chat Screen'),
