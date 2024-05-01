@@ -63,7 +63,7 @@ Not only you would learn to make your code public, you would also explore the in
 - Create individual PR for each suggestion.
 
 #### Creating A Pull Request:
-IMPORTANT : You have to generate separate pull requests of each issue along with screenshot ,vedio of the changes you made .
+IMPORTANT : You have to generate separate pull requests of each issue along with screenshot ,video of the changes you made .
 
 1. Fork the Project:
 
