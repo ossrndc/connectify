@@ -104,7 +104,8 @@ class _Individual_chatState extends State<Individual_chat> {
                                suffixIcon: Row(
                                  mainAxisSize: MainAxisSize.min,//kya jadu
                                  children: [
-                                   IconButton(onPressed: (){}, icon: Icon(Icons.attach_file))
+                                   IconButton(onPressed: (){}, icon: Icon(Icons.attach_file)),
+                                   IconButton(onPressed: (){}, icon: Icon(Icons.send)),
                                  ],
                                ),
                               hintText: 'Type a message',
