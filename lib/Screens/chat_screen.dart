@@ -40,7 +40,14 @@ class _chat_screenState extends State<chat_screen> {
       icon: 'Icons.person',
       isGroup: true,
       time: '1:20',
-    )
+    ),
+     chatmodel(
+      currentMessage: 'Working on the first contribution',
+      name: 'Commit-24',
+      icon: 'Icons.person',
+      isGroup: true,
+      time: '8:20',
+    ),
   ];
   @override
 
